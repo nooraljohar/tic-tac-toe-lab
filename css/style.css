@@ -1,0 +1,32 @@
+body {
+    background-color: gainsboro;
+    /* Use a system font, if none are available use an available sans-sarif */
+    font-family: system-ui, sans-serif;
+    margin: 0;
+  }
+  
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 325px;
+  }
+  
+.sqr {
+    width: 30%;
+    aspect-ratio: 1/1;
+    border: 3px solid black;
+    font-size: 64px;
+    text-align: center;
+  }
+.sqr.x {
+    background-color: #ffcccb; /* Light red background for 'X' */
+    color: red;
+}
+.sqr.o {
+    background-color: #add8e6; /* Light blue background for 'O' */
+    color: blue;
+}
+.sqr.empty {
+    background-color: #f0f0f0; /* Light gray background for empty squares */
+    color: black;
+}
