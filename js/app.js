@@ -13,7 +13,7 @@ const winningCombos = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 let turn ='X';
-//let winner = false;
+let winner = false;
 let tie = false;
 
 
@@ -40,9 +40,6 @@ const handleClick = (index) => {
         return;
     board[index] = tie;
     updateBoard();
-
-const currentPlayer = (tie === 'X') ? 'O' : 'X';
-    messageEl.textContent = `Player ${tie}'s turn`;
 }
 
 const updateBoard = (squareEls,index) => {
@@ -89,4 +86,14 @@ const checkWinner = () => {
             messageEl.textContent = `draw!`;
             running =false;
         }
-/*----------------------------- Event Listeners -----------------------------*/
+
+const init = () =>{
+
+}
+
+const render = () => {
+    updateBoard();
+    updateMessage();
+}
+
+/*---------------------------- Event Listeners -----------------------------*/
